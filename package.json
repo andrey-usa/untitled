@@ -1,4 +1,4 @@
-{
+{ "homepage": "https://andrey-usa.github.io/untitled/",
   "name": "untitled",
   "version": "0.1.0",
   "private": true,
@@ -11,6 +11,8 @@
     "react-scripts": "3.4.1"
   },
   "scripts": {
+    "predeploy": "npm run buid",
+    "deploy": "gh-pages -d buid",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
