@@ -1,30 +1,42 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import Header from './Header';
-
-
-// JSX
-// XML like syntax
-
+import './App.css'
+import Header from './Header/Header';
+import Footer from './Footer/Footer';
 
 function App() {
+
+    const mainTitle = 'Car Parts';
+    const HeaderMenuItems = [
+
+        {title: 'Home'},
+        {title: 'Order parts'},
+        {title: 'Shipping'},
+        {title: 'Deals'},
+    ];
+    const FooterMenuItems = [
+
+        {title: 'Payment'},
+        {title: 'COVID-19 information'},
+        {title: 'Careers'},
+        {title: 'Contact'},
+
+
+    ];
+
     return (
         <div className="App">
-            <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo"/>
+            <Header
+                title={mainTitle}
+                HeaderMenuItems={HeaderMenuItems}
 
-                <p>
-                    Edit <code>src/App.js</code> and save to reload.
-                </p>
-                <a
-                    className="App-link"
-                    href="https://reactjs.org"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >Учить Реакт
-                </a>
-            </header>
+            />
+            <h1>Car parts, covid free</h1>
+
+            <Footer
+
+                FooterMenuItems={FooterMenuItems}
+
+            />
         </div>
     );
 }
